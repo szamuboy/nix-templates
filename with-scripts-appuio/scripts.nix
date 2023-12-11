@@ -1,4 +1,4 @@
-{ writeShellApplication }:
+{ writeShellApplication, openshift }:
 let
   scripts = {
     oc-login = {

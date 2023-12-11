@@ -7,8 +7,8 @@
     let
       pkgs = nixpkgs.legacyPackages.x86_64-linux;
       scripts = pkgs.callPackage ./scripts.nix { };
-    in {
-      devShells.x86_64-linux.default =
-        pkgs.mkShell { packages = (with pkgs; [ ] ++ scripts); };
-    };
+      in {
+	devShells.x86_64-linux.default =
+          pkgs.mkShell { packages = (with pkgs; [ kubectl k9s openshift ] ++ scripts); };
+      };
 }
