@@ -3,6 +3,10 @@
 
   outputs = { self, ... }: {
     templates = {
+      basic = {
+        description = "Basic development environment";
+        path = ./basic;
+      };
       with-scripts = {
         description = "Development environment with scripts";
         path = ./with-scripts;
